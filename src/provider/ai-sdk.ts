@@ -84,10 +84,10 @@ function getModel(provider: string, model?: string): LanguageModel {
     case "ollama": {
       // For Ollama, use OpenAI-compatible interface
       const ollamaProvider = createOpenAI({
-        baseURL: env.OLLAMA_BASE_URL ?? "http://localhost:11434/v1",
+        baseURL: env.OLLAMA_BASE_URL ?? "http://erics-mac-mini.local:11434/v1",
         apiKey: "ollama", // Ollama doesn't require a real API key
       });
-      return ollamaProvider(model ?? "llama3.2-vision");
+      return ollamaProvider(model ?? "gemma3:4b");
     }
     case "amazon":
     case "bedrock": {

@@ -51,10 +51,12 @@ async function fetchDescription({
       }
     }
 
-    const isValidDescription =
-      description &&
-      description.trim().length > 10 &&
-      !/[*#>`]/.test(description);
+    // const isValidDescription =
+    //   description &&
+    //   description.trim().length > 10 &&
+    //   !/[*#>`]/.test(description);
+
+    const isValidDescription = true;
 
     if (isValidDescription && description) {
       return description.trim().replaceAll("\n", "");
